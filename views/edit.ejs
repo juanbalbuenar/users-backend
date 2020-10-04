@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <a href="/" class="navbar-brand">Usuarios MongoDB</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/edit/<%= users._id %>" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="firstName" placeholder="Inserta un Nombre" class="form-control" value="<%= users.firstName %>">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="lastName" placeholder="Inserta un Apellido" class="form-control" value="<%= users.lastName %>">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" placeholder="Inserta un E-mail" class="form-control" value="<%= users.email %>">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" placeholder="Inserta su numero" class="form-control" value="<%= users.phone %>">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Actualizar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
